@@ -1,0 +1,89 @@
+
+/* font-family: 'Red Rose', cursive;
+font-family: 'Roboto', sans-serif; */
+
+
+:root {
+    --red_gros: #D7293D;
+    --pasion_gros: #EFF1E7;
+    --black_gros: #100C1A;
+    --light_gros: #E6FBFE;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    color: var(--black_gros);
+    background-size: 100%;
+    background: #EFF1E7;
+    background-image: url(./assets/index.png);
+    background-size: 90rem;
+    background-position: right;
+    background-position-y: top;
+    background-repeat: no-repeat;
+
+}
+header {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5rem 3rem ;
+
+}
+.titleSite {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.name {
+    display: block;
+    font-family:'Red Rose', cursive;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--red_gros);
+    text-transform: uppercase;
+}
+.name span {
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.actrees {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+@media screen and (min-width: 320px) {
+}
+@media screen and (min-width: 479px) {
+}
+@media screen and (min-width: 767px) {
+    html {
+        background-size: 130rem;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    html {
+        background-size: 185rem;
+    }
+    
+}
