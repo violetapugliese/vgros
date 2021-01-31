@@ -22,28 +22,62 @@ html {
     font-family: 'Roboto', sans-serif;
     color: var(--black_gros);
     background-size: 100%;
-    background: #EFF1E7;
+    background-color: #EFF1E7;
     background-image: url(./assets/index.png);
-    background-size: 90rem;
+    background-size: 104rem;
     background-position: right;
     background-position-y: top;
     background-repeat: no-repeat;
 
 }
 header {
-    position: fixed;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
+   position: absolute;
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+   height: auto;
+   padding: 3rem 2rem;
 }
+.ham {
+  position: absolute;
+  /* always keep ham on top of everything */
+  z-index: 1000;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+  background-size: 100%;
+}
+.showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+  }
+  
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 40%;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    transform: translateX(200%);
+    transition: transform 0.5s ease;
+  }
+
+  .showNav {
+    display: flex;
+    transform: translateX(60%);
+  }
+  
 .main {
     position: absolute;
     width: 100%;
     height: 100%;
-    padding: 5rem 3rem ;
-
+    padding: 3rem 3rem ;
 }
 .titleSite {
     position: absolute;
@@ -55,17 +89,19 @@ header {
 .name {
     display: block;
     font-family:'Red Rose', cursive;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 2rem;
     color: var(--red_gros);
     text-transform: uppercase;
 }
 .name span {
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 0.3em;
 }
 .actrees {
     display: block;
+    padding-right: 0.6rem ;
+    font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -79,11 +115,45 @@ header {
     html {
         background-size: 130rem;
     }
-    
+    .name{
+        font-size: 4rem;
+    }
+    .actrees {
+        font-size: 2.8rem;
+    }
+    .main {
+        padding: 10rem 3rem;
+    }
+    .ham {
+        display: none;
+    }
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        background: transparent;
+        width: 40%;
+        height: auto;
+        overflow: hidden;
+        color: white;
+        transform: translateX(0);
+        /* transition: transform 0.5s ease; */
+      }
 }
 @media screen and (min-width: 1024px) {
     html {
         background-size: 185rem;
     }
-    
+    .name{
+        font-size: 6rem;
+    }
+    .actrees {
+        font-size: 3rem;
+        padding-right: 2rem;
+    }
+    .main {
+        padding: 12rem 3rem;
+    }
 }

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;600&family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
-    <title>Violeta Gros</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Violeta Gros</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;600&family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header >
-        <i class="burgerButton" id="burgerButton"><img src="./assets/burger.png" alt="burger_button"></i>
-        <nav class="barNav" id="barNav">
-            <a class="linkMenu" href="">Home</a>
-            <a class="linkMenu" href="">Bio</a>
-            <a class="linkMenu" href="">Fotos</a>
-            <a class="linkMenu" href="">Teatro</a>
-            <a class="linkMenu" href="">Contacto</a>
-        </nav>
+    <header>
+        <button class="ham"></button>
+    <nav class="navbar">
+        <ul>
+        <li><a class="menuLink" href="#">Home</a></li>
+        <li><a class="menuLink" href="#">Profile</a></li>
+        <li><a class="menuLink" href="#">About</a></li>
+        <li><a class="menuLink" href="#">Contacts</a></li>
+        </ul>
+    </nav>
     </header>
     <section class="main" id="main">
         <div class="titleSite">
@@ -25,5 +26,27 @@
             <h3 class="actrees" id="actrees">Actriz</h3>
         </div>
     </section>
+    <script>
+        var navbar = document.querySelector(".navbar")
+        var ham = document.querySelector(".ham")
+
+        // toggles hamburger menu in and out when clicking on the hamburger
+        function toggleHamburger(){
+        navbar.classList.toggle("showNav")
+        ham.classList.toggle("showClose")
+        }
+
+        ham.addEventListener("click", toggleHamburger)
+
+        // toggle when clicking on links
+
+        // METHOD 1
+        var menuLinks = document.querySelectorAll(".menuLink")
+        menuLinks.forEach( 
+        function(menuLink) { 
+        menuLink.addEventListener("click", toggleHamburger) 
+        }
+        )
+    </script>
 </body>
 </html>
