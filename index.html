@@ -10,25 +10,25 @@
 </head>
 <body>
     <header>
-        <button class="ham"></button>
-    <nav class="navbar">
-        <ul>
-        <li><a class="menuLink" href="#">Home</a></li>
-        <li><a class="menuLink" href="#">Profile</a></li>
-        <li><a class="menuLink" href="#">About</a></li>
-        <li><a class="menuLink" href="#">Contacts</a></li>
-        </ul>
-    </nav>
-    </header>
-    <section class="main" id="main">
         <div class="titleSite">
             <h1 class="name" id="name">Violeta <span>Gros</span></h1>
             <h3 class="actrees" id="actrees">Actriz</h3>
         </div>
+        <button class="ham"></button>
+    <nav class="navbar">
+        <a href="#" class="menuLink">Home</a>
+        <a href="#" class="menuLink">Bio</a>
+        <a href="#" class="menuLink">Fotografías</a>
+        <a href="#" class="menuLink">Trabajos</a>
+        <a href="#" class="menuLink">Contacto</a>
+    </nav>
+    </header>
+    <section class="main" id="main">
     </section>
     <script>
         var navbar = document.querySelector(".navbar")
         var ham = document.querySelector(".ham")
+        var menuLinks = document.querySelectorAll(".menuLink")
 
         // toggles hamburger menu in and out when clicking on the hamburger
         function toggleHamburger(){
@@ -41,10 +41,9 @@
         // toggle when clicking on links
 
         // METHOD 1
-        var menuLinks = document.querySelectorAll(".menuLink")
         menuLinks.forEach( 
         function(menuLink) { 
-        menuLink.addEventListener("click", toggleHamburger) 
+            menuLink.addEventListener("click", toggleHamburger) 
         }
         )
     </script>

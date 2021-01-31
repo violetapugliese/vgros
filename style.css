@@ -31,50 +31,64 @@ html {
 
 }
 header {
-   position: absolute;
-   display: flex;
-   justify-content: flex-end;
-   width: 100%;
-   height: auto;
-   padding: 3rem 2rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem 2rem 0rem;
+    width: 100%;
+    min-width: 320px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    z-index: 102;
 }
 .ham {
   position: absolute;
-  /* always keep ham on top of everything */
+  display: block;
+  align-self:flex-end ;
   z-index: 1000;
   width: 3rem;
   height: 3rem;
   border: none;
   cursor: pointer;
   background-color: transparent;
-  background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
-  background-size: 100%;
+  background-image: url("./assets/burger.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
 }
 .showClose {
-    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
-  }
+    opacity: 1;
+}
   
   .navbar {
-    display: none;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+    background-color: transparent;
+    z-index: 101;
     top: 0;
-    left: 0;
-    background: transparent;
-    width: 40%;
+    right: -100vw;
+    width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    color: white;
-    transform: translateX(200%);
-    transition: transform 0.5s ease;
+    transition: .5s;
   }
 
   .showNav {
-    display: flex;
-    transform: translateX(60%);
+    /* visibility: visible; */
+    right: -70%;
   }
-  
+  .menuLink{
+      z-index: 2000;
+      font-size: 2rem;
+      text-decoration: none;
+  }
+  .menuLink:hover {
+    border-bottom: 2px solid white;  
+  }
 .main {
-    position: absolute;
     width: 100%;
     height: 100%;
     padding: 3rem 3rem ;
@@ -139,8 +153,12 @@ header {
         overflow: hidden;
         color: white;
         transform: translateX(0);
+        visibility: visible;
         /* transition: transform 0.5s ease; */
       }
+      .titleSite {
+        margin-top: 30rem;
+    }
 }
 @media screen and (min-width: 1024px) {
     html {
