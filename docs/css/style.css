@@ -79,9 +79,11 @@ header {
       z-index: 2000;
       font-size: 1.5rem;
       text-decoration: none;
+      color: var(--red_gros);
+      margin-left: 2rem;
   }
   .menuLink:hover {
-    border-bottom: 2px solid white;  
+    color: #100C1A; 
   }
 .main {
     width: 100vw;
@@ -130,26 +132,53 @@ header {
 .bioSection {
     width: 100%;
     overflow: hidden;
-    background-image: url(../assets/aboutme.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 .bioImg{
+    margin-top: 8rem ;
+    width: 100%;
+}
+.bioImgResponsive {
+    display: none;
+    margin-top: 8rem;
     width: 100%;
 }
 .sectionTitle {
-    font-size: 2rem;
+    position: absolute;
+    top: 10rem;
+    right: 3rem;
+    /* margin: 10rem 0rem; */
+    font-family: 'Red Rose', cursive;
+    font-size: 8rem;
     text-align: center;
     text-transform: uppercase;
-    color: var(--black_gros);
+    color: var(--red_gros);
 }
 .bioTextContainer{
     width: 80%;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 .bioText {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+.backHeader{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 8rem;
+    background-color: #EFF1E7;
+}
+footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    height: 8rem;
+    background-color: var(--pasion_gros);
+}
+.copyRigth {
     text-align: center;
-    font-size: 1.2rem;
 }
 
 @media screen and (min-width: 320px) {
@@ -184,11 +213,27 @@ header {
         visibility: visible;
         /* transition: transform 0.5s ease; */
       }
+      
       .titleSite {
-          width: 60%;
-          padding-top: 10rem;
+        width: 60%;
+        padding-top: 10rem;
       }
-}
+      .bioTextContainer{     
+        width: 35%;
+        margin: 2 auto;
+    }
+    .bioImg{
+        display: none;
+    }
+    .bioImgResponsive {
+        display: block;
+    }
+    .sectionTitle {
+        position: fixed;
+        top: 15rem;
+        font-size: 10rem;
+    }
+ }
 @media screen and (min-width: 1024px) {
     .name{
         font-size: 6rem;

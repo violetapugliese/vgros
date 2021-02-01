@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Violeta Gros</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;600&family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="titleSite-header">
+            <h1 class="name-header" id="name-header">Violeta <span>Gros</span></h1>
+            <h3 class="actrees-header" id="actrees-header">Actriz</h3>
+        </div>
+        <button class="ham"></button>
+    <nav class="navbar">
+        <a href="../index.html" class="menuLink">Home</a>
+        <a href="./bio.html" class="menuLink">Bio</a>
+        <a href="./pages/fotografias.html" class="menuLink">Fotografías</a>
+        <a href="./pages/trabajos.html" class="menuLink">Trabajos</a>
+        <a href="./pages/contacto.html" class="menuLink">Contacto</a>
+    </nav>
+    </header>
+    <section class="bioSection" id="bioSection">
+        <div class="backHeader"></div>
+    <footer>
+        <p class="copyRigth">Sitio web creado y desarrollado por Violeta Pugliese ©</p>
+    </footer>
+    <script>
+        var navbar = document.querySelector(".navbar")
+        var ham = document.querySelector(".ham")
+        var menuLinks = document.querySelectorAll(".menuLink")
+
+        // toggles hamburger menu in and out when clicking on the hamburger
+        function toggleHamburger(){
+        navbar.classList.toggle("showNav")
+        ham.classList.toggle("showClose")
+        }
+
+        ham.addEventListener("click", toggleHamburger)
+
+        // toggle when clicking on links
+
+        // METHOD 1
+        menuLinks.forEach( 
+        function(menuLink) { 
+            menuLink.addEventListener("click", toggleHamburger) 
+        }
+        )
+    </script>
+</body>
+</html>
