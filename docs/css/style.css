@@ -128,12 +128,14 @@ header {
     width: 176px;
 }
 .bioSection {
-    width: 100vw;
-    padding-top: 10rem;
+    width: 100%;
     overflow: hidden;
     background-image: url(../assets/aboutme.png);
     background-size: 100%;
     background-repeat: no-repeat;
+}
+.bioImg{
+    width: 100%;
 }
 .sectionTitle {
     font-size: 2rem;
